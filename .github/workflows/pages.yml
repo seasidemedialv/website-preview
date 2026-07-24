@@ -32,6 +32,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html styles.css script.js .nojekyll _site/
+          cp -R rigas-santehnikis _site/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4

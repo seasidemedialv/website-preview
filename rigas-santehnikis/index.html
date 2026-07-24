@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#082e3b" />
+    <meta
+      name="description"
+      content="Rīgas Santehniķis demonstrācijas lapa — santehnikas pakalpojumi Rīgā un Pierīgā."
+    />
+    <title>Rīgas Santehniķis | Demonstrācijas lapa</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <div class="container">
+        <span>Demonstrācijas vietne</span>
+        <span>Rīga un Pierīga</span>
+        <span>Darba dienās un brīvdienās</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="Rīgas Santehniķis sākumlapa">
+          <img src="images/logo.svg" alt="Rīgas Santehniķis" />
+        </a>
+        <nav class="desktop-nav" aria-label="Galvenā izvēlne">
+          <a href="#pakalpojumi">Pakalpojumi</a>
+          <a href="#kapec-mes">Kāpēc mēs</a>
+          <a href="#darbi">Darbi</a>
+          <a href="#buj">BUJ</a>
+        </nav>
+        <a class="button button-small" href="#pieteikums">Pieteikt darbu</a>
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-label="Atvērt izvēlni"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobilā izvēlne">
+        <a href="#pakalpojumi">Pakalpojumi</a>
+        <a href="#kapec-mes">Kāpēc mēs</a>
+        <a href="#darbi">Darbi</a>
+        <a href="#buj">BUJ</a>
+        <a class="button" href="#pieteikums">Pieteikt darbu</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-image" role="img" aria-label="Santehniķis darbam Rīgas dzīvoklī"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> Vietējais meistars Rīgā</p>
+            <h1>Santehnikas darbi bez lieka stresa.</h1>
+            <p class="hero-lead">
+              No nelielas noplūdes līdz vannas istabas montāžai — skaidrs process,
+              rūpīgs darbs un saprotama komunikācija.
+            </p>
+            <div class="hero-points">
+              <span>✓ Izbraukumi visā Rīgā</span>
+              <span>✓ Darba vieta pēc remonta sakārtota</span>
+              <span>✓ Izmaksas saskaņojam pirms darba</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-accent" href="#pieteikums">Aprakstīt problēmu</a>
+              <a class="button button-ghost" href="#pakalpojumi">Skatīt pakalpojumus</a>
+            </div>
+          </div>
+
+          <aside class="request-card" id="pieteikums">
+            <p class="card-kicker">Ātrs pieteikums</p>
+            <h2>Kas jāizdara?</h2>
+            <p>Atstājiet informāciju, un šī demonstrācijas forma parādīs nākamo soli.</p>
+            <form id="request-form" novalidate>
+              <label>
+                Vārds
+                <input name="name" type="text" autocomplete="name" placeholder="Jūsu vārds" required />
+              </label>
+              <label>
+                Tālrunis
+                <input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+371 2X XXX XXX"
+                  required
+                />
+              </label>
+              <label>
+                Pakalpojums
+                <select name="service" required>
+                  <option value="">Izvēlieties pakalpojumu</option>
+                  <option>Avārijas remonts</option>
+                  <option>Cauruļu remonts</option>
+                  <option>Kanalizācijas tīrīšana</option>
+                  <option>Santehnikas montāža</option>
+                  <option>Apkures sistēmas</option>
+                </select>
+              </label>
+              <button class="button button-accent button-full" type="submit">
+                Turpināt →
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Pakalpojuma priekšrocības">
+        <div class="container">
+          <div><strong>01</strong><span>Skaidra darba gaita</span></div>
+          <div><strong>02</strong><span>Rīga un Pierīga</span></div>
+          <div><strong>03</strong><span>Rūpīga diagnostika</span></div>
+          <div><strong>04</strong><span>Tīra darba vieta</span></div>
+        </div>
+      </section>
+
+      <section class="section services-section" id="pakalpojumi">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow dark"><span></span> Pakalpojumi</p>
+              <h2>Palīdzība ikdienas un steidzamās situācijās</h2>
+            </div>
+            <p>
+              Šis ir testa saturs, kas parāda, kā viena pakalpojumu lapa izskatītos
+              ar īstu struktūru un pilnvērtīgiem vizuālajiem materiāliem.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card service-card-wide">
+              <img
+                src="images/service-emergency.webp"
+                alt="Nelielas noplūdes remonts zem virtuves izlietnes"
+                loading="lazy"
+              />
+              <div class="service-body">
+                <span>Steidzami</span>
+                <h3>Avārijas remonts</h3>
+                <p>Noplūdes lokalizēšana, bojājuma diagnostika un drošs pagaidu vai pastāvīgs risinājums.</p>
+                <a href="#pieteikums">Pieteikt darbu <b>→</b></a>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="images/service-pipes.webp"
+                alt="Santehniķis remontē ūdens caurules"
+                loading="lazy"
+              />
+              <div class="service-body">
+                <span>Remonts</span>
+                <h3>Caurules un savienojumi</h3>
+                <p>Nolietotu posmu, ventiļu un savienojumu pārbaude, remonts vai nomaiņa.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="images/service-drain.webp"
+                alt="Kanalizācijas un izlietnes notekas tīrīšana"
+                loading="lazy"
+              />
+              <div class="service-body">
+                <span>Tīrīšana</span>
+                <h3>Kanalizācija</h3>
+                <p>Aizsprostojumu novēršana un notekas darbības pārbaude bez liekas nekārtības.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="images/service-install.webp"
+                alt="Jaunas vannas istabas santehnikas montāža"
+                loading="lazy"
+              />
+              <div class="service-body">
+                <span>Montāža</span>
+                <h3>Vannas istaba</h3>
+                <p>Izlietņu, jaucējkrānu, dušu un citu santehnikas iekārtu uzstādīšana.</p>
+              </div>
+            </article>
+            <article class="service-card">
+              <img
+                src="images/service-heating.webp"
+                alt="Radiatora un apkures sistēmas pārbaude"
+                loading="lazy"
+              />
+              <div class="service-body">
+                <span>Apkure</span>
+                <h3>Radiatori un apkure</h3>
+                <p>Radiatoru, ventiļu un redzamo apkures sistēmas mezglu apkope.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-section" id="kapec-mes">
+        <div class="container why-grid">
+          <div class="why-image-wrap">
+            <img
+              src="images/consultation.webp"
+              alt="Santehniķis izskaidro remonta gaitu mājokļa īpašniekam"
+              loading="lazy"
+            />
+            <div class="image-note">
+              <strong>Vispirms saprotam problēmu.</strong>
+              <span>Tad piedāvājam praktisku risinājumu.</span>
+            </div>
+          </div>
+          <div class="why-copy">
+            <p class="eyebrow dark"><span></span> Vienkāršs process</p>
+            <h2>Meistars, ar kuru var normāli sarunāties.</h2>
+            <p class="large-copy">
+              Labs serviss nav tikai salabota caurule. Tas ir skaidrs ierašanās
+              laiks, saprotams darba plāns un mājoklis, kas pēc remonta nav atstāts nekārtībā.
+            </p>
+            <ol class="steps">
+              <li>
+                <span>1</span>
+                <div><strong>Aprakstiet situāciju</strong><p>Pievienojiet svarīgāko informāciju pieteikuma formā.</p></div>
+              </li>
+              <li>
+                <span>2</span>
+                <div><strong>Saskaņojam risinājumu</strong><p>Precizējam darbu, materiālus un piemērotu apmeklējuma laiku.</p></div>
+              </li>
+              <li>
+                <span>3</span>
+                <div><strong>Darbu paveicam rūpīgi</strong><p>Pārbaudām rezultātu un sakārtojam darba vietu.</p></div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="darbi">
+        <div class="container">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow"><span></span> Darba vide</p>
+              <h2>Praktiski risinājumi reālos mājokļos</h2>
+            </div>
+            <p>Nevis sterili kataloga kadri, bet ticama ikdienas darba sajūta.</p>
+          </div>
+          <div class="gallery">
+            <figure class="gallery-large">
+              <img src="images/service-pipes.webp" alt="Cauruļu remonta darbi" loading="lazy" />
+              <figcaption>Cauruļu mezglu diagnostika</figcaption>
+            </figure>
+            <figure>
+              <img src="images/service-heating.webp" alt="Apkures sistēmas apkope" loading="lazy" />
+              <figcaption>Apkures sistēmas apkope</figcaption>
+            </figure>
+            <figure>
+              <img src="images/service-install.webp" alt="Santehnikas montāža vannas istabā" loading="lazy" />
+              <figcaption>Santehnikas montāža</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="buj">
+        <div class="container faq-grid">
+          <div>
+            <p class="eyebrow dark"><span></span> Biežākie jautājumi</p>
+            <h2>Pirms pieteikuma</h2>
+            <p class="large-copy">
+              Testa lapā nav īsta telefona, cenu vai nepārbaudītu solījumu. Reālā
+              projektā tos ievietotu tikai pēc uzņēmuma datu apstiprināšanas.
+            </p>
+          </div>
+          <div class="accordions">
+            <details open>
+              <summary>Vai šī ir īsta uzņēmuma mājaslapa?<span>+</span></summary>
+              <p>Nē. Šī ir demonstrācijas lapa dizaina, struktūras un GitHub Pages testēšanai.</p>
+            </details>
+            <details>
+              <summary>Vai pieteikuma forma nosūta manus datus?<span>+</span></summary>
+              <p>Nē. Forma darbojas tikai pārlūkā un neko nenosūta ārējam servisam.</p>
+            </details>
+            <details>
+              <summary>Vai šo dizainu var izmantot īstam projektam?<span>+</span></summary>
+              <p>Jā. Pirms palaišanas jāievieto verificēti uzņēmuma dati, kontakti un juridiskā informācija.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container final-cta-inner">
+          <div>
+            <p class="eyebrow"><span></span> Gatavs nākamajam solim?</p>
+            <h2>Aprakstiet santehnikas darbu.</h2>
+          </div>
+          <a class="button button-accent" href="#pieteikums">Atvērt pieteikumu →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <img src="images/logo.svg" alt="Rīgas Santehniķis" />
+          <p>Demonstrācijas vietne Seaside Media priekšskatījumu repozitorijā.</p>
+        </div>
+        <div>
+          <strong>Sadaļas</strong>
+          <a href="#pakalpojumi">Pakalpojumi</a>
+          <a href="#kapec-mes">Process</a>
+          <a href="#buj">BUJ</a>
+        </div>
+        <div>
+          <strong>Statuss</strong>
+          <span>Testa projekts</span>
+          <span>Nav reāls uzņēmums</span>
+          <span>Forma neko nenosūta</span>
+        </div>
+      </div>
+      <div class="container copyright">
+        <span>© <span id="year"></span> Rīgas Santehniķis — demonstrācija</span>
+        <a href="../">Atpakaļ uz Preview Lab</a>
+      </div>
+    </footer>
+  </body>
+</html>

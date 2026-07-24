@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 326 72" role="img" aria-labelledby="title">
+  <title id="title">Rīgas Santehniķis</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M8 14h28c9 0 15 6 15 14s-6 14-15 14H19" stroke="#0D6376" stroke-width="9" stroke-linecap="square"/>
+    <path d="M63 58H35c-9 0-15-6-15-14s6-14 15-14h17" stroke="#CFE4E8" stroke-width="9" stroke-linecap="square"/>
+    <path d="M8 8v13M63 51v13" stroke="#FFAD32" stroke-width="6"/>
+    <rect x="31" y="26" width="14" height="14" rx="2" fill="#FFAD32"/>
+    <text x="82" y="29" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" letter-spacing="1">RĪGAS</text>
+    <text x="82" y="54" fill="#CFE4E8" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="750">SANTEHNIĶIS</text>
+  </g>
+</svg>
