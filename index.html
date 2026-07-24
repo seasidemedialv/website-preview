@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A simple, mobile-friendly test page for the Seaside Media website preview repository."
+    />
+    <meta name="theme-color" content="#071a2d" />
+    <title>Seaside Preview Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Seaside Preview Lab home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Seaside Preview Lab</span>
+        </a>
+        <span class="status"><span class="status-dot"></span> Test site</span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">GitHub Pages preview</p>
+            <h1 id="page-title">Small site.<br />Solid starting point.</h1>
+            <p class="intro">
+              This responsive test page confirms that the preview repository is
+              ready for future website builds.
+            </p>
+            <div class="actions">
+              <button class="button button-primary" id="test-button" type="button">
+                Test interaction
+              </button>
+              <a class="button button-secondary" href="#details">See details</a>
+            </div>
+            <p class="confirmation" id="confirmation" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="preview-card" aria-label="Website preview status">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="card-body">
+              <span class="checkmark" aria-hidden="true">✓</span>
+              <p class="card-label">Preview status</p>
+              <p class="card-title">Ready to build</p>
+              <p class="card-text">Responsive layout · No dependencies · Fast load</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="features" id="details" aria-label="Test site features">
+          <article>
+            <span>01</span>
+            <h2>Mobile friendly</h2>
+            <p>Designed to read and feel natural on phones, tablets, and desktops.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h2>Easy to reuse</h2>
+            <p>Plain HTML, CSS, and JavaScript make this foundation easy to adapt.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h2>Preview ready</h2>
+            <p>A GitHub Actions workflow publishes the site after changes reach main.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>Seaside Media · Website preview test</p>
+        <p>© <span id="year"></span></p>
+      </footer>
+    </div>
+  </body>
+</html>
