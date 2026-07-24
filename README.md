@@ -9,10 +9,10 @@ JavaScript. It has no package dependencies or build step.
 
 ## Preview
 
-When GitHub Pages is configured to use **GitHub Actions**, every change merged
-into `main` is published automatically.
+GitHub Pages publishes every change pushed to `main` using the included GitHub
+Actions workflow.
 
-Expected URL:
+Preview URL:
 
 `https://seasidemedialv.github.io/website-preview/`
 
