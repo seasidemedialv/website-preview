@@ -22,17 +22,45 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out preview repository
         uses: actions/checkout@v4
+
+      - name: Check out custom kitchen website
+        uses: actions/checkout@v4
+        with:
+          repository: seasidemedialv/virtuvespecpasutijuma.lv
+          ref: main
+          path: source/virtuvespecpasutijuma
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: source/virtuvespecpasutijuma/package-lock.json
+
+      - name: Install kitchen website dependencies
+        run: npm ci
+        working-directory: source/virtuvespecpasutijuma
+
+      - name: Build kitchen website preview
+        run: npx next build
+        working-directory: source/virtuvespecpasutijuma
+        env:
+          GITHUB_PAGES: "true"
+          GITHUB_PAGES_BASE_PATH: "/website-preview/virtuvespecpasutijuma"
+          NEXT_TELEMETRY_DISABLED: "1"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Prepare static site
         run: |
-          mkdir _site
+          mkdir -p _site/virtuvespecpasutijuma
           cp index.html styles.css script.js .nojekyll _site/
           cp -R rigas-santehnikis _site/
+          cp -R source/virtuvespecpasutijuma/out/. _site/virtuvespecpasutijuma/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
