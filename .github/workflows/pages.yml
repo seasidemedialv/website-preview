@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with supplied brand assets: 2026-07-29
+# Direct static deployment with five-minute response messaging: 2026-07-29
 on:
   push:
     branches:
