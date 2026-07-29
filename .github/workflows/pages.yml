@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Rebuild virtuvespecpasutijuma preview from restored template: 2026-07-28
+# Direct static deployment for virtuvespecpasutijuma.lv: 2026-07-29
 on:
   push:
     branches:
@@ -26,7 +26,7 @@ jobs:
       - name: Check out preview repository
         uses: actions/checkout@v4
 
-      - name: Check out custom kitchen website
+      - name: Check out static kitchen website
         uses: actions/checkout@v4
         with:
           repository: seasidemedialv/virtuvespecpasutijuma.lv
@@ -34,34 +34,32 @@ jobs:
           path: source/virtuvespecpasutijuma
           persist-credentials: false
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: source/virtuvespecpasutijuma/package-lock.json
-
-      - name: Install kitchen website dependencies
-        run: npm ci
-        working-directory: source/virtuvespecpasutijuma
-
-      - name: Build kitchen website preview
-        run: npx next build
-        working-directory: source/virtuvespecpasutijuma
-        env:
-          GITHUB_PAGES: "true"
-          GITHUB_PAGES_BASE_PATH: "/website-preview/virtuvespecpasutijuma"
-          NEXT_TELEMETRY_DISABLED: "1"
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare static site
+      - name: Prepare static site without a build step
+        shell: bash
         run: |
-          mkdir -p _site/virtuvespecpasutijuma
+          set -euo pipefail
+          target="_site/virtuvespecpasutijuma"
+          source="source/virtuvespecpasutijuma"
+          mkdir -p "$target"
           cp index.html styles.css script.js .nojekyll _site/
           cp -R rigas-santehnikis _site/
-          cp -R source/virtuvespecpasutijuma/out/. _site/virtuvespecpasutijuma/
+          cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.svg" "$source/robots.txt" "$source/sitemap.xml" "$target/"
+          cp -R "$source/public" "$target/"
+          for page in \
+            buj iebuvetas-virtuves ka-mes-stradajam kontakti mazas-virtuves \
+            modernas-virtuves par-mums privatuma-politika realizetie-projekti \
+            stura-un-l-veida-virtuves virtuves-ar-salu virtuves-cenas \
+            virtuves-dizains-un-projektesana virtuves-fasades virtuves-furnitura \
+            virtuves-iekartas-pec-pasutijuma virtuves-interjers \
+            virtuves-izgatavosana virtuves-planosana virtuves-skapisi \
+            virtuves-uzstadisana
+          do
+            cp -R "$source/$page" "$target/"
+          done
+          touch _site/.nojekyll
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
