@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment for virtuvespecpasutijuma.lv: 2026-07-29
+# Direct static deployment with uniform forms: 2026-07-29
 on:
   push:
     branches:
