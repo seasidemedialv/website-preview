@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with area-first forms: 2026-07-29
+# Direct static deployment with expanded service content: 2026-07-29
 on:
   push:
     branches:
