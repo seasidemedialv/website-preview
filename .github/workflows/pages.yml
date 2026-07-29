@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with service and city hubs: 2026-07-29
+# Direct static deployment with supplied brand assets: 2026-07-29
 on:
   push:
     branches:
@@ -46,7 +46,7 @@ jobs:
           mkdir -p "$target"
           cp index.html styles.css script.js .nojekyll _site/
           cp -R rigas-santehnikis _site/
-          cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.svg" "$source/robots.txt" "$source/sitemap.xml" "$target/"
+          cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.png" "$source/robots.txt" "$source/sitemap.xml" "$target/"
           cp -R "$source/public" "$target/"
           cp -R "$source/pakalpojumi" "$source/pilsetas" "$target/"
           for page in \
