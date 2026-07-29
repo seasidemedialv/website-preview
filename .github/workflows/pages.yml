@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with differentiated city copy: 2026-07-29
+# Direct static deployment with consultation form label: 2026-07-29
 on:
   push:
     branches:
