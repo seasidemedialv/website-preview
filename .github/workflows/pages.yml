@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with 20 service-area pages: 2026-07-29
+# Direct static deployment with corrected city routes and contrast: 2026-07-29
 on:
   push:
     branches:
