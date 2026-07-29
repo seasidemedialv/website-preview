@@ -1,6 +1,6 @@
 name: Deploy GitHub Pages
 
-# Direct static deployment with other service-area option: 2026-07-29
+# Direct static deployment with service and city hubs: 2026-07-29
 on:
   push:
     branches:
@@ -48,14 +48,10 @@ jobs:
           cp -R rigas-santehnikis _site/
           cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.svg" "$source/robots.txt" "$source/sitemap.xml" "$target/"
           cp -R "$source/public" "$target/"
+          cp -R "$source/pakalpojumi" "$source/pilsetas" "$target/"
           for page in \
-            buj iebuvetas-virtuves ka-mes-stradajam kontakti mazas-virtuves \
-            modernas-virtuves par-mums privatuma-politika realizetie-projekti \
-            stura-un-l-veida-virtuves virtuves-ar-salu virtuves-cenas \
-            virtuves-dizains-un-projektesana virtuves-fasades virtuves-furnitura \
-            virtuves-iekartas-pec-pasutijuma virtuves-interjers \
-            virtuves-izgatavosana virtuves-planosana virtuves-skapisi \
-            virtuves-uzstadisana
+            buj ka-mes-stradajam kontakti par-mums privatuma-politika \
+            realizetie-projekti
           do
             cp -R "$source/$page" "$target/"
           done
