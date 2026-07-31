@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100">
+  <rect width="520" height="100" fill="#202522"/>
+  <circle cx="52" cy="50" r="30" fill="none" stroke="#cdbb9f" stroke-width="2"/>
+  <path d="M36 65V35h32v30M36 52h32" fill="none" stroke="#cdbb9f" stroke-width="2"/>
+  <text x="108" y="59" fill="#f3f4ef" font-family="Georgia, serif" font-size="28">Virtuves pēc pasūtījuma</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100">
+  <rect width="520" height="100" fill="#f3f4ef"/>
+  <g fill="none" stroke="#315a45" stroke-width="3">
+    <path d="M24 76V24h56v52M24 52h56M52 24v52"/>
+    <path d="M31 32h14M59 61h14"/>
+  </g>
+  <text x="108" y="53" fill="#202522" font-family="Georgia, serif" font-size="26">Virtuves</text>
+  <text x="108" y="75" fill="#315a45" font-family="Arial, sans-serif" font-size="13" letter-spacing="3">PĒC PASŪTĪJUMA</text>
+</svg>
