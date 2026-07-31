@@ -40,7 +40,7 @@ jobs:
           cp -R rigas-santehnikis _site/
           cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.png" "$source/robots.txt" "$source/sitemap.xml" "$target/"
           cp -R "$source/public" "$target/"
-          cp -R "$source/pakalpojumi" "$source/pilsetas" "$source/celvedis" "$source/en" "$target/"
+          cp -R "$source/pakalpojumi" "$source/pilsetas" "$source/celvedis" "$source/en" "$source/ru" "$target/"
           for page in \
             buj ka-mes-stradajam kontakti par-mums privatuma-politika \
             realizetie-projekti
