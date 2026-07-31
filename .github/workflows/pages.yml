@@ -26,14 +26,6 @@ jobs:
       - name: Check out preview repository
         uses: actions/checkout@v4
 
-      - name: Check out static kitchen website
-        uses: actions/checkout@v4
-        with:
-          repository: seasidemedialv/virtuvespecpasutijuma.lv
-          ref: main
-          path: source/virtuvespecpasutijuma
-          persist-credentials: false
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
@@ -42,13 +34,13 @@ jobs:
         run: |
           set -euo pipefail
           target="_site/virtuvespecpasutijuma"
-          source="source/virtuvespecpasutijuma"
+          source="virtuvespecpasutijuma"
           mkdir -p "$target"
           cp index.html styles.css script.js .nojekyll _site/
           cp -R rigas-santehnikis _site/
           cp "$source/index.html" "$source/404.html" "$source/styles.css" "$source/script.js" "$source/favicon.png" "$source/robots.txt" "$source/sitemap.xml" "$target/"
           cp -R "$source/public" "$target/"
-          cp -R "$source/pakalpojumi" "$source/pilsetas" "$target/"
+          cp -R "$source/pakalpojumi" "$source/pilsetas" "$source/celvedis" "$target/"
           for page in \
             buj ka-mes-stradajam kontakti par-mums privatuma-politika \
             realizetie-projekti
